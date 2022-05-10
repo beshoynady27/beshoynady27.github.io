@@ -15,8 +15,20 @@
         body, html {
             height: 100%;
             font-family: 'Oleo Script Swash Caps', cursive;
-            /* The image used */
-            background-image: url("pexels-felix-mittermeier-956999.jpg");
+            background-color: rgb(31, 2, 112);
+            
+            
+            /*text*/
+            color: white;
+        }
+
+        .mContainer {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             /* The image used */
+             background-image: url("pexels-felix-mittermeier-956999.jpg");
             background-color: dimgray;
         
             /* Full height */
@@ -26,16 +38,6 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            
-            /*text*/
-            color: white;
-        }
-
-        .mContainer {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .sContainer {
@@ -59,7 +61,41 @@
             margin-bottom: 7%;
         }
         
-    
+        .secondContainer {
+            height: 100vh;
+            background-color: rgb(31, 2, 112);
+        }
+        .portfolio{
+            text-align: center;
+            padding: 3%;
+        }
+        .cards{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        @media screen and (max-width:500px){
+            .cards{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                
+            }
+            .card{
+                margin: 2%;
+             
+            }
+        }
+        .card {
+            color: rgb(255, 255, 255);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: black;
+            
+        }
+        .card:hover{
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -96,18 +132,39 @@
             
                 <div class="container">
                     <div class="row">
-                        <a class="col" href="https://www.fiverr.com/beshoynady758/do-your-responsive-wordpress-web-site">
-                            <button style="width: 100%;" type="button" class="btn btn-dark">hire me !</button>
-                        </a>
-                        <a class="col" href="#">
-                            <button style="width: 100%;" type="button" class="btn btn-dark">portfolio</button>
-                        </a>
+                      <div class="col">
+                        <button style="width: 100%;" type="button" class="btn btn-dark">hire me !</button>
+                      </div>
+                      <div class="col">
+                        <button style="width: 100%;" type="button" class="btn btn-dark">portfolio</button>
+                      </div>
                     </div>
                 </div>
                 
         </div>
     </div>
     
-
+    <!--Second Section-->
+    <section class="secondContainer">
+        <h2 class="portfolio">Portfolio</h2>
+        <div class="cards">
+            <div class="card" style="width: 18rem;">
+                <img src="pexels-daniel-frank-305564.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">clinic</h5>
+                  <p class="card-text">dectal clinin web application using python, flask</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="pexels-pixabay-264547.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Imaginary project</h5>
+                  <p class="card-text">imaginary shopping website that I didn't work on yet</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+    </section>
 </body>
 </html>
